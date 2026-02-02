@@ -1,230 +1,52 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="open_flower.png" type="image/x-icon">
 	<title>Per la mia amata</title>
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-
-		body {
-			font-family: 'Cormorant Garamond', serif;
-			background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-			min-height: 100vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			overflow-x: hidden;
-			position: relative;
-		}
-
-		/* Animated hearts background */
-		.hearts {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			pointer-events: none;
-			z-index: 1;
-		}
-
-		.heart {
-			position: absolute;
-			font-size: 20px;
-			animation: float 15s infinite;
-			opacity: 0;
-		}
-
-		@keyframes float {
-			0% {
-				transform: translateY(100vh) rotate(0deg);
-				opacity: 0;
-			}
-			10% {
-				opacity: 0.6;
-			}
-			90% {
-				opacity: 0.6;
-			}
-			100% {
-				transform: translateY(-100vh) rotate(360deg);
-				opacity: 0;
-			}
-		}
-
-		.container {
-			position: relative;
-			z-index: 2;
-			max-width: 700px;
-			width: 90%;
-			background: linear-gradient(to bottom, #fff9f0, #fef6ec);
-			border-radius: 20px;
-			padding: 60px 50px;
-			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-			border: 3px solid #d4af37;
-			text-align: center;
-		}
-
-		.ornament {
-			font-size: 40px;
-			color: #d4af37;
-			margin-bottom: 20px;
-		}
-
-		h1 {
-			font-family: 'Cinzel', serif;
-			font-size: 42px;
-			color: #2c1810;
-			margin-bottom: 30px;
-			font-weight: 600;
-			letter-spacing: 2px;
-		}
-
-		.letter {
-			font-size: 22px;
-			line-height: 1.8;
-			color: #3d2817;
-			margin-bottom: 40px;
-			font-style: italic;
-			text-align: left;
-			padding: 0 20px;
-		}
-
-		.signature {
-			text-align: right;
-			font-size: 28px;
-			font-weight: 600;
-			color: #2c1810;
-			margin-top: 30px;
-			font-family: 'Cormorant Garamond', serif;
-			font-style: italic;
-		}
-
-		.buttons {
-			display: flex;
-			gap: 20px;
-			justify-content: center;
-			margin-top: 40px;
-			flex-wrap: wrap;
-		}
-
-		button {
-			font-family: 'Cinzel', serif;
-			padding: 18px 45px;
-			font-size: 18px;
-			border: 2px solid #d4af37;
-			border-radius: 50px;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			font-weight: 600;
-			letter-spacing: 1px;
-		}
-
-		#yesBtn {
-			background: linear-gradient(135deg, #d4af37, #f4d03f);
-			color: #2c1810;
-		}
-
-		#yesBtn:hover {
-			transform: scale(1.05);
-			box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
-		}
-
-		#noBtn {
-			background: transparent;
-			color: #2c1810;
-			position: relative;
-		}
-
-		#noBtn:hover {
-			background: rgba(212, 175, 55, 0.1);
-		}
-
-		.hidden {
-			display: none;
-		}
-
-		/* Yes response */
-		.yes-response {
-			animation: fadeIn 1s ease-in;
-		}
-
-		@keyframes fadeIn {
-			from { opacity: 0; transform: scale(0.8); }
-			to { opacity: 1; transform: scale(1); }
-		}
-
-		.celebration {
-			font-size: 60px;
-			margin-bottom: 20px;
-			animation: bounce 1s infinite;
-		}
-
-		@keyframes bounce {
-			0%, 100% { transform: translateY(0); }
-			50% { transform: translateY(-20px); }
-		}
-
-		/* No response - dramatic scene */
-		.no-response {
-			animation: fadeIn 1s ease-in;
-		}
-
-		.dramatic-text {
-			font-size: 24px;
-			color: #8b4513;
-			margin: 20px 0;
-			font-style: italic;
-			line-height: 1.6;
-		}
-
-		.gossip-lady {
-			font-family: 'Cinzel', serif;
-			font-size: 16px;
-			color: #666;
-			margin-top: 30px;
-			font-style: italic;
-			padding: 20px;
-			background: rgba(212, 175, 55, 0.1);
-			border-left: 4px solid #d4af37;
-			text-align: left;
-		}
-
-		.second-chance {
-			margin-top: 30px;
-			padding: 20px;
-			background: rgba(255, 235, 205, 0.5);
-			border-radius: 10px;
-		}
-
-		.scandal {
-			color: #c41e3a;
-			font-weight: 600;
-		}
-	</style>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Pirata+One&family=UnifrakturMaguntia&display=swap"
+		rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 </head>
+
 <body>
+	<!-- Background Music -->
+	<audio id="backgroundMusic" loop>
+		<source src="music.mp3" type="audio/mpeg">
+		<!-- Sostituisci 'music.mp3' con il nome del tuo file audio -->
+	</audio>
+
 	<div class="hearts" id="hearts"></div>
-	
-	<div class="container">
+
+	<!-- Sealed Letter -->
+	<div id="sealedLetter" class="sealed-letter">
+		<div class="letter-envelope">
+			<div class="letter-front">
+				<div class="seal">✦</div>
+				<p class="letter-text">Per La Mia Amata</p>
+				<p class="letter-subtitle">Apri per rivelare il tuo destino</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="display: none;" id="mainContainer">
 		<div id="proposal" class="proposal">
 			<div class="ornament">❦</div>
-			<h1>Carissima Mia Amata</h1>
-			
+			<h1>Amore Mio</h1>
+
 			<div class="letter">
-				<p>In questa stagione sociale di grande rilievo, mentre la ton si prepara per celebrare San Valentino, io mi trovo nella necessità di porre una questione di estrema importanza al tuo gentile cuore.</p>
+				<p>In questa stagione sociale di grande rilievo, mentre la ton si prepara per celebrare San Valentino,
+					io mi trovo nella necessità di porre una questione di estrema importanza al tuo gentile cuore.</p>
 				<br>
-				<p>Come ben sai, un gentiluomo di buona condotta deve assicurarsi una compagna per tale occasione, e non vi è dama in tutto il regno che io desideri al mio fianco se non te.</p>
+				<p>Come ben sai, un gentiluomo di buona condotta deve assicurarsi una compagna per tale occasione, e non
+					vi è dama in tutto il regno che io desideri al mio fianco se non te.</p>
 				<br>
 				<p>Pertanto, con la massima sincerità e affetto che il mio cuore può esprimere, ti chiedo:</p>
 				<br>
-				<p style="text-align: center; font-size: 26px; font-weight: 600; color: #d4af37;">
+				<p style="text-align: center; font-size: 26px; font-weight: 600; color: #9b59b6;">
 					Vorresti essere la mia Valentine?
 				</p>
 			</div>
@@ -237,118 +59,109 @@
 
 		<!-- Yes Response -->
 		<div id="yesResponse" class="yes-response hidden">
-			<div class="celebration">🎉 💖 🎊</div>
-			<h1>Evviva!</h1>
-			<div class="letter">
-				<p style="text-align: center; font-size: 24px;">
-					La stagione sociale è salva! Il cuore di questo umile programmatore trabocca di gioia!
-				</p>
-				<br>
-				<p style="text-align: center; font-size: 20px;">
-					Sarà il San Valentino più splendido che la ton abbia mai visto! 
-				</p>
-				<br>
-				<p style="text-align: center; font-size: 18px; color: #d4af37; font-weight: 600;">
-					Ti amo! ❤️
-				</p>
-			</div>
-		</div>
-
-		<!-- No Response -->
-		<div id="noResponse" class="no-response hidden">
-			<h1>Lo Scandalo del Secolo!</h1>
-			
-			<div class="dramatic-text">
-				<p>*Si sente il suono di una penna che cade drammaticamente*</p>
-				<br>
-				<p class="scandal">SCANDALO!</p>
-				<p>Un rifiuto di tale portata non si vedeva dalla stagione del 1813!</p>
-			</div>
-
-			<div class="gossip-lady">
-				<strong>🖋️ Lady Whistledown riferisce:</strong>
-				<br><br>
-				"Care lettrici, questa autrice deve riportare con grande costernazione che un certo programmatore è stato pubblicamente rifiutato dalla dama del suo cuore. La ton è in subbuglio! Alcuni dicono che il povero gentiluomo sarà costretto a passare San Valentino a debuggare codice in solitudine. Che destino crudele!"
-			</div>
-
-			<div class="second-chance">
-				<p style="font-size: 20px; margin-bottom: 20px;">
-					Ma attendete! Forse vi è stata una svista... un ripensamento?
-				</p>
-				<p style="font-size: 18px; color: #666;">
-					Dopotutto, anche nelle migliori famiglie accadono errori di giudizio...
-				</p>
-				<div class="buttons" style="margin-top: 20px;">
-					<button id="reconsiderBtn">Ho Ripensato... Sì! 💕</button>
+			<div class="yes-paper">
+				
+				<h1>Evviva!</h1>
+				
+				<div class="bridgerton-quote">
+					"You are the bane of my existence...<br>
+					and the object of all my desires"
+				</div>
+				
+				<div class="letter">
+					<p style="text-align: center; font-size: 24px; color: #ffffff;">
+						La stagione sociale è salva! Il cuore di questo umile programmatore trabocca di gioia!
+					</p>
+					<br>
+					<p style="text-align: center; font-size: 20px; color: #ffffff;">
+						Sarà il San Valentino più splendido che la ton abbia mai visto!
+					</p>
+					<div class="countdown-box">
+						<p style="font-size: 16px; color: #9b59b6; margin-bottom: 5px;">Mancano solo</p>
+						<p id="countdown" style="font-size: 32px; font-weight: 700; color: #9b59b6; margin: 0;">12 giorni</p>
+						<p style="font-size: 16px; color: #9b59b6; margin-top: 5px;">al nostro San Valentino</p>
+					</div>
+					<br>
+					<p id="loveText" class="love-text">
+						Ti amo! ❤️
+					</p>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<script>
-		// Create floating hearts
-		const heartsContainer = document.getElementById('hearts');
-		const heartSymbols = ['💕', '💖', '💗', '💝', '❤️', '🌹'];
-		
-		function createHeart() {
-			const heart = document.createElement('div');
-			heart.className = 'heart';
-			heart.textContent = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
-			heart.style.left = Math.random() * 100 + '%';
-			heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
-			heart.style.animationDelay = Math.random() * 5 + 's';
-			heartsContainer.appendChild(heart);
-			
-			setTimeout(() => heart.remove(), 20000);
-		}
+		<!-- No Response - Lady Whistledown's Society Papers -->
+		<div id="noResponse" class="no-response hidden">
+			<div class="society-paper">
+				<div class="decorative-corner top-left"></div>
+				<div class="decorative-corner top-right"></div>
+				<div class="decorative-corner bottom-left"></div>
+				<div class="decorative-corner bottom-right"></div>
 
-		// Create hearts periodically
-		setInterval(createHeart, 800);
-		for (let i = 0; i < 10; i++) {
-			setTimeout(createHeart, i * 300);
-		}
+				<div class="silhouette">
+					<img src="logo.png" alt="Lady Whistledown">
+				</div>
 
-		// Button handlers
-		const proposal = document.getElementById('proposal');
-		const yesResponse = document.getElementById('yesResponse');
-		const noResponse = document.getElementById('noResponse');
-		const yesBtn = document.getElementById('yesBtn');
-		const noBtn = document.getElementById('noBtn');
-		const reconsiderBtn = document.getElementById('reconsiderBtn');
+				<div class="paper-title">Lady Whistledown's</div>
+				<div class="paper-subtitle">SOCIETY PAPERS</div>
+				<div class="paper-date">Lunedì, 2 Febbraio, 2026</div>
 
-		yesBtn.addEventListener('click', () => {
-			proposal.classList.add('hidden');
-			yesResponse.classList.remove('hidden');
-			
-			// Extra celebration hearts
-			for (let i = 0; i < 30; i++) {
-				setTimeout(createHeart, i * 100);
-			}
-		});
+				<div class="paper-divider"></div>
+				<div class="paper-motto">EXTRAORDINARY PEOPLE. EXTRAORDINARY NEWS.</div>
+				<div class="paper-divider"></div>
 
-		noBtn.addEventListener('click', () => {
-			proposal.classList.add('hidden');
-			noResponse.classList.remove('hidden');
-		});
+				<div class="scandal-headline">Il Rifiuto del Secolo</div>
 
-		reconsiderBtn.addEventListener('click', () => {
-			noResponse.classList.add('hidden');
-			yesResponse.classList.remove('hidden');
-			
-			// Celebration hearts
-			for (let i = 0; i < 30; i++) {
-				setTimeout(createHeart, i * 100);
-			}
-		});
+				<div class="dramatic-text">
+					Carissimi e Gentili Lettori, questa autrice si trova nella scomoda posizione di dover riferire uno
+					scandalo di proporzioni senza precedenti. Un certo gentiluomo programmatore, il cui nome questa
+					autrice ha pietosamente scelto di omettere, ha ricevuto un rifiuto dalla dama del suo cuore in
+					questa stagione di San Valentino.
+				</div>
 
-		// Make "No" button slightly harder to click (fun interaction)
-		let noClickCount = 0;
-		noBtn.addEventListener('mouseenter', () => {
-			if (noClickCount === 0) {
-				noBtn.textContent = "Ne sei sicura? 🥺";
-				noClickCount++;
-			}
-		});
-	</script>
+				<div class="dramatic-text">
+					La ton è naturalmente in subbuglio. Le matrone sussurrano dietro i loro ventagli, i gentiluomini
+					scuotono il capo con disapprovazione, e i servitori della casa hanno riferito di aver sentito il
+					suono di una tastiera che veniva colpita con particolare enfasi drammatica.
+				</div>
+
+				<p style="text-align: center; margin: 25px 0;">
+					<span class="scandal">SCANDALO!</span>
+				</p>
+
+				<div class="dramatic-text">
+					Un rifiuto di tale portata non si vedeva dalla sfortunata stagione del 1813, quando Lord Berbrooke
+					fu similmente respinto. Si dice che il povero gentiluomo sarà costretto a passare San Valentino in
+					solitudine, probabilmente a debuggare codice e a bere tè freddo. Che destino crudele per un cuore
+					così devoto!
+					<div class="gossip-lady">
+						<strong>L'Opinione di Questa Autrice:</strong>
+						<br><br>
+						Tuttavia, cari lettori, questa autrice non può fare a meno di notare che anche nelle famiglie
+						più rispettabili, errori di giudizio vengono commessi. Persino i diamanti più brillanti della
+						stagione hanno avuto i loro momenti di esitazione. Forse, solo forse, vi è ancora speranza per
+						questo infelice programmatore? Dopotutto, questa autrice ha visto riavvicinamenti più
+						improbabili accadere sotto il cielo londinese.
+						<br><br>
+						La domanda rimane: avrà la dama un ripensamento prima che il calendario segni il fatidico 14
+						febbraio?
+					</div>
+
+					<div class="signature">
+						Vostra devotissima,<br>
+						Lady Whistledown
+					</div>
+
+					<div class="paper-divider" style="margin: 30px 0;"></div>
+
+					<p
+						style="font-size: 16px; text-align: center; font-family: 'IM Fell English', serif; font-style: italic; margin-bottom: 20px;">
+						Forse la dama ha riconsiderato la sua posizione?
+					</p>
+
+					<div class="buttons" style="margin-top: 20px;">
+						<button id="reconsiderBtn">Ho Ripensato... Accetto! 💕</button>
 </body>
+
+<script src="script.js"></script>
+
 </html>

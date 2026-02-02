@@ -1,0 +1,489 @@
+/* Global Cursor */
+body, button {
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat943.cur), auto !important;
+}
+
+/* Sealed Letter */
+.sealed-letter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  animation: fadeIn 0.8s ease-in;
+}
+
+.sealed-letter.hidden {
+  display: none;
+}
+
+.letter-envelope {
+  perspective: 1000px;
+}
+
+.letter-front {
+  background: linear-gradient(135deg, #fff9f0, #fef6ec);
+  border: 4px solid rgb(155, 89, 182);
+  padding: 50px 150px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(155, 89, 182, 0.5), inset 0 0 30px rgba(155, 89, 182, 0.2);
+  max-width: 550px;
+  min-height: 250px;
+  animation: letterFloat 2s ease-in-out infinite;
+  position: relative;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@keyframes letterFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.seal {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: sealPulse 2s ease-in-out infinite;
+}
+
+@keyframes sealPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.letter-text {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  color: #2c1810;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.letter-subtitle {
+  margin: 0 0 40px 0 !important;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: #3d2817;
+  font-style: italic;
+  
+}
+
+/* Regular styles */
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* Animated hearts background */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: float 15s infinite;
+  opacity: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.6;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 0px 50px;
+  text-align: center;
+}
+
+.ornament {
+  font-size: 40px;
+  color: #9b59b6;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0 0 8px 0;
+}
+
+.letter {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 0px;
+  font-style: italic;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+button {
+  font-family: "Cinzel", serif;
+  padding: 18px 45px;
+  font-size: 18px;
+  border: 2px solid #9b59b6;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#yesBtn {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+  color: #ffffff;
+}
+
+#yesBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(155, 89, 182, 0.4);
+}
+
+#noBtn {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+  color: #ffffff;
+  position: relative;
+}
+
+#noBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(155, 89, 182, 0.4);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Yes response */
+.yes-response {
+  animation: fadeIn 1s ease-in;
+  padding: 0px 10px;
+}
+
+.yes-paper {
+  background: transparent;
+  padding: 40px 30px;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  box-shadow: none;
+}
+
+.bridgerton-quote {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  color: #9b59b6;
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0 30px;
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-box {
+  text-align: center;
+  padding: 20px;
+  background: rgba(155, 89, 182, 0.15);
+  border: 2px solid #9b59b6;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.love-text {
+  text-align: center;
+  font-size: 36px;
+  color: #9b59b6;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: heartPulse 1.5s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+  user-select: none;
+}
+
+.love-text:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(155, 89, 182, 0.8);
+}
+
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Rose petals - fall from top of page */
+.petal {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: petalFall 5s ease-out forwards;
+  opacity: 0.9;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.celebration {
+  font-size: 60px;
+  margin-bottom: 20px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* No response - Lady Whistledown's Society Papers */
+.no-response {
+  animation: fadeIn 1s ease-in;
+  padding: 20px 10px;
+}
+
+.society-paper {
+  background: #fefefe;
+  padding: 40px 30px;
+  border: 3px solid #1a1a1a;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.05);
+}
+
+.decorative-corner {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #1a1a1a;
+}
+
+.yes-paper .decorative-corner {
+  border-color: #9b59b6;
+}
+
+.decorative-corner.top-left {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.decorative-corner.top-right {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.decorative-corner.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.decorative-corner.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+
+.silhouette {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.silhouette img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.paper-title {
+  font-family: "IM Fell English", serif;
+  font-size: 32px;
+  color: #1a1a1a;
+  margin: 10px 0 5px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.paper-subtitle {
+  font-family: "IM Fell English SC", serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.paper-date {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.paper-divider {
+  height: 3px;
+  background: #1a1a1a;
+  margin: 15px 0;
+}
+
+.paper-motto {
+  font-family: "IM Fell English SC", serif;
+  font-size: 11px;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.scandal-headline {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-size: 28px;
+  color: #1a1a1a;
+  margin: 20px 0;
+  letter-spacing: 1px;
+}
+
+.dramatic-text {
+  font-family: "IM Fell English", serif;
+  font-size: 16px;
+  color: #2a2a2a;
+  margin: 15px 0;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.dramatic-text.first-paragraph {
+  text-indent: 30px;
+}
+
+.gossip-lady {
+  font-family: "IM Fell English", serif;
+  font-size: 14px;
+  color: #2a2a2a;
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid #1a1a1a;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.signature {
+  font-family: "IM Fell English", serif;
+  font-size: 20px;
+  color: #1a1a1a;
+  margin-top: 20px;
+  font-style: italic;
+  text-align: center;
+}
+
+.scandal {
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
